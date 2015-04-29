@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    padding: 5px;
+    background: url("../images/gwt-logo.png") 0 0 no-repeat;
+}
+
+img {
+    background: url("../images/gwt-logo.png") 0 0 no-repeat;
+}
+
+h1 {
+    background-image: url("data:image/png;base64,xxx");
+}
+
+button {
+    background-image: url("../not-valid-path/test.png");
+}

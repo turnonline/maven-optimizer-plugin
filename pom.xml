@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.ctoolkit.maven.plugins</groupId>
+    <artifactId>maven-optimizer-plugin</artifactId>
+    <version>0.8-SNAPSHOT</version>
+    <name>Web resource optimizer plugin</name>
+    <description>Web resource optimizer plugin encodes images in css into base64, minify and merge css (project css and
+        external css as well), minify and merge javascipts
+    </description>
+
+    <scm>
+        <connection>scm:svn:https://subversion.assembla.com/svn/library-collection.14/trunk/optimizer</connection>
+        <developerConnection>scm:svn:https://subversion.assembla.com/svn/library-collection.14/trunk/optimizer
+        </developerConnection>
+        <url>https://www.assembla.com/code/library-collection/subversion-14/nodes</url>
+    </scm>
+
+    <issueManagement>
+        <url>https://www.assembla.com/spaces/library-collection/tickets</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <name>Aurel Medvegy</name>
+            <id>medvegy</id>
+            <email>medvegy@comvai.com</email>
+        </developer>
+        <developer>
+            <name>Jozef Pohorelec</name>
+            <id>pohorelec</id>
+            <email>pohorelec@comvai.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-project</artifactId>
+            <version>3.0-alpha-2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.google-collections</groupId>
+                    <artifactId>google-collect</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-settings</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.javascript</groupId>
+            <artifactId>closure-compiler</artifactId>
+            <version>r2388</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.closure-stylesheets</groupId>
+            <artifactId>closure-stylesheets</artifactId>
+            <version>20140426</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <description>Web resource optimizer plugin</description>
+    <groupId>org.ctoolkit.maven.plugins</groupId>
+    <artifactId>maven-optimizer-plugin</artifactId>
+    <version>0.7</version>
+    <isolatedRealm>false</isolatedRealm>
+    <inheritedByDefault>true</inheritedByDefault>
+    <goalPrefix>optimizer</goalPrefix>
+    <mojos>
+        <mojo>
+            <goal>optimize</goal>
+            <description>Goal which optimizes web resources (css and java-script).</description>
+            <requiresDirectInvocation>false</requiresDirectInvocation>
+            <requiresProject>true</requiresProject>
+            <requiresReports>false</requiresReports>
+            <aggregator>false</aggregator>
+            <requiresOnline>false</requiresOnline>
+            <inheritedByDefault>true</inheritedByDefault>
+            <phase>compile</phase>
+            <implementation>com.comvai.maven.plugins.optimizer.ResourceOptimizerMojo</implementation>
+            <language>java</language>
+            <instantiationStrategy>per-lookup</instantiationStrategy>
+            <executionStrategy>once-per-session</executionStrategy>
+            <parameters>
+                <parameter>
+                    <name>settings</name>
+                    <type>org.apache.maven.settings.Settings</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description>Maven settings.</description>
+                </parameter>
+                <parameter>
+                    <name>project</name>
+                    <type>org.apache.maven.project.MavenProject</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description>Maven project.</description>
+                </parameter>
+                <parameter>
+                    <name>cssPathToXml</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Path to css configuration xml file.</description>
+                </parameter>
+                <parameter>
+                    <name>cssOutputPath</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Css output path.</description>
+                </parameter>
+                <parameter>
+                    <name>jsPathToXml</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Path to java-script configuration xml file.</description>
+                </parameter>
+                <parameter>
+                    <name>jsOutputPath</name>
+                    <type>java.lang.String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description>Java-script output path.</description>
+                </parameter>
+            </parameters>
+            <configuration>
+                <settings implementation="org.apache.maven.settings.Settings">${settings}</settings>
+                <project implementation="org.apache.maven.project.MavenProject">${project}</project>
+            </configuration>
+        </mojo>
+    </mojos>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <type>jar</type>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-project</artifactId>
+            <version>3.0-alpha-2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.google-collections</groupId>
+                    <artifactId>google-collect</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-settings</artifactId>
+            <version>3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.javascript</groupId>
+            <artifactId>closure-compiler</artifactId>
+            <version>r2388</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.closure-stylesheets</groupId>
+            <artifactId>closure-stylesheets</artifactId>
+            <version>20140426</version>
+        </dependency>
+    </dependencies>
+</plugin>

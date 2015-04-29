@@ -1,0 +1,7 @@
+<groups>
+    <group name="style.min.css">
+        <external-css>/external.css</external-css>
+
+        <css>/src/test/webapp/styles/custom.css</css>
+    </group>
+</groups>

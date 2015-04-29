@@ -1,0 +1,9 @@
+<groups>
+    <common>
+        <js>src/test/webapp/scripts/messages.js</js>
+    </common>
+
+    <group name="script.min.js">
+        <js>src/test/webapp/scripts/script.js</js>
+    </group>
+</groups>
