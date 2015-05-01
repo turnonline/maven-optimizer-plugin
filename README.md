@@ -45,11 +45,11 @@ With this configuration you can configure folowing:
 <groups>
   <common>
     <!-- Path to common project java-script. This file will be appended to every group -->
-    <js>src/main/webapp/scripts/script.js</js>
+    <js>/src/main/webapp/scripts/script.js</js>
   </common>
   <group name="script.min.css"> <!-- Output java-script file name -->
     <!-- Path to project java-script -->
-    <js>src/main/webapp/scripts/script.js</js>
+    <js>/src/main/webapp/scripts/script.js</js>
   </group>
 </groups>
 ```
@@ -67,7 +67,7 @@ Configuration properties:
 <build>
   <plugins>           
     <plugin>
-      <groupId>org.turnonline.maven.plugins</groupId>
+      <groupId>org.ctoolkit.maven.plugins</groupId>
       <artifactId>maven-optimizer-plugin</artifactId>
       <version>1.0</version>
       <executions>
