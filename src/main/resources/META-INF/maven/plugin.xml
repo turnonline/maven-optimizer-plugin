@@ -37,7 +37,7 @@
             <requiresOnline>false</requiresOnline>
             <inheritedByDefault>true</inheritedByDefault>
             <phase>compile</phase>
-            <implementation>com.comvai.maven.plugins.optimizer.ResourceOptimizerMojo</implementation>
+            <implementation>org.ctoolkit.maven.plugins.optimizer.ResourceOptimizerMojo</implementation>
             <language>java</language>
             <instantiationStrategy>per-lookup</instantiationStrategy>
             <executionStrategy>once-per-session</executionStrategy>
