@@ -22,7 +22,7 @@
     <description>Web resource optimizer plugin</description>
     <groupId>org.ctoolkit.maven.plugins</groupId>
     <artifactId>maven-optimizer-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
     <isolatedRealm>false</isolatedRealm>
     <inheritedByDefault>true</inheritedByDefault>
     <goalPrefix>optimizer</goalPrefix>
