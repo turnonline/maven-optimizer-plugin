@@ -22,7 +22,7 @@
     <description>Web resource optimizer plugin</description>
     <groupId>org.ctoolkit.maven.plugins</groupId>
     <artifactId>maven-optimizer-plugin</artifactId>
-    <version>1.2</version>
+    <version>${project.version}</version>
     <isolatedRealm>false</isolatedRealm>
     <inheritedByDefault>true</inheritedByDefault>
     <goalPrefix>optimizer</goalPrefix>
@@ -121,9 +121,9 @@
             <version>r2388</version>
         </dependency>
         <dependency>
-            <groupId>com.google.closure-stylesheets</groupId>
+            <groupId>com.google.closure</groupId>
             <artifactId>closure-stylesheets</artifactId>
-            <version>20140426</version>
+            <version>1.1</version>
         </dependency>
     </dependencies>
 </plugin>
