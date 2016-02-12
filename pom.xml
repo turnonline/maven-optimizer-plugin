@@ -23,7 +23,7 @@
 
     <groupId>org.ctoolkit.maven.plugins</groupId>
     <artifactId>maven-optimizer-plugin</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>Web resource optimizer plugin</name>
     <packaging>jar</packaging>
     <description>Web resource optimizer plugin encodes images in css into base64, minify and merge css (project css and
